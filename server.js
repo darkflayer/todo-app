@@ -7,7 +7,9 @@ const cors = require("cors");
 const app = express();
 
 // Allow frontend to talk to backend
-app.use(cors());
+app.use(cors({
+  origin: ["https://todo-app-beta-three-78.vercel.app/"] 
+}));
 // Let our app understand JSON data
 app.use(express.json());
 
